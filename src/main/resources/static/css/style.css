@@ -1,0 +1,209 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto", sans-serif;
+    background-color: #f7f7f7;
+}
+
+.above-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0072bc;
+    color: white;
+    padding: 5px 10px;
+}
+
+.above-navbar-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.apply-btn {
+    background-color: #ff6101;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #015195;
+    color: white;
+    padding: 10px 20px;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    background: url('/static/img/your-logo.png') no-repeat;
+    width: 50px;
+    height: 50px;
+}
+
+.nav-address {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-address-style {
+    color: white;
+    text-decoration: none;
+}
+
+.nav-address-end {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.register-btn, .phone-btn {
+    background-color: transparent;
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.gadmission {
+    text-align: center;
+    padding: 50px 0;
+    background: #015195 url('/static/img/background-image.jpg') no-repeat center center/cover;
+    color: white;
+}
+
+.key-element {
+    margin-top: 20px;
+}
+
+.mid-card-btn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.exam-score-style, .keywords-style {
+    background-color: #0072bc;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.examscore {
+    margin: 20px auto;
+    width: 70%;
+}
+
+.search-btn {
+    margin-top: 20px;
+}
+
+.search-btn-style {
+    background-color: #ff6101;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.banner div {
+    text-align: center;
+}
+
+.banner button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner button.university {
+    background-color: #212529;
+}
+
+.banner button.course {
+    background-color: #04abc3;
+}
+
+.banner button.branch {
+    background-color: #502757;
+}
+
+.banner button.visa {
+    background-color: #6c757d;
+}
+
+.getstart-btn {
+    margin-top: 30px;
+}
+
+.getstart-btn-style {
+    background-color: #ffffff;
+    color: #015195;
+    padding: 10px 20px;
+    border: 2px solid #015195;
+    cursor: pointer;
+}
+
+.countries {
+    padding: 20px;
+}
+
+.heading-content {
+    margin-bottom: 20px;
+}
+
+.carouselholder {
+    width: 90%;
+    margin: auto;
+}
+
+@media (max-width: 768px) {
+    .nav-address {
+        display: none;
+    }
+
+    .nav-address-end {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .nav-logo, .nav-address-end {
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    .above-navbar-content {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .examscore {
+        width: 100%;
+    }
+
+    .banner, .getstart-btn {
+        flex-direction: column;
+    }
+}
