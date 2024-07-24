@@ -8,13 +8,16 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
+        // Replace this with the actual checkout step for your repository
         sh 'echo passed'
-        
+        // Debug step: List the contents of the current directory
+        sh 'ls -l'
       }
     }
     stage('Build and Test') {
       steps {
-        sh 'ls -ltr'
+        // Debug step: List the contents of the current directory again to ensure Jenkins_cicd exists
+        sh 'ls -l'
         // build the project and create a JAR file
         sh 'cd Jenkins_cicd && mvn clean package'
       }
