@@ -8,8 +8,9 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        // Replace this with the actual checkout step for your repository
-        sh 'echo passed'
+        // Check out the repository
+        checkout([$class: 'GitSCM', branches: [[name: '*/main']], 
+          userRemoteConfigs: [[url: 'https://github.com/sairamreddy-r/jenkins-cicd.git', credentialsId: 'github']]])
         // Debug step: List the contents of the current directory
         sh 'ls -l'
       }
@@ -18,7 +19,7 @@ pipeline {
       steps {
         // Debug step: List the contents of the current directory again to ensure Jenkins_cicd exists
         sh 'ls -l'
-        // build the project and create a JAR file
+        // Build the project and create a JAR file
         sh 'cd Jenkins_cicd && mvn clean package'
       }
     }
@@ -49,7 +50,7 @@ pipeline {
     }
     stage('Update Deployment File') {
         environment {
-            GIT_REPO_NAME = "Jenkins_cicd"
+            GIT_REPO_NAME = "jenkins-cicd"
             GIT_USER_NAME = "sairamreddy-r"
         }
         steps {
